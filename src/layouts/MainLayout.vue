@@ -31,14 +31,17 @@ export default {
         display: flex;
         
     }
-    input{
-        margin-top: 1em;
-
-    }
 }
 .enter{
     border: 1px solid black;
     margin: auto;
     width: 100px;
+}
+.invalid{
+    background-color: rgb(216, 64, 64);
+}
+.input-form{
+    display: flex;
+    align-items: center;
 }
 </style>
