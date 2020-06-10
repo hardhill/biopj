@@ -16,3 +16,29 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.login-block{
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 1em;
+}
+.input-block{
+    margin: 1em;
+    div{
+        font-size: 1.2rem;
+        display: flex;
+        
+    }
+    input{
+        margin-top: 1em;
+
+    }
+}
+.enter{
+    border: 1px solid black;
+    margin: auto;
+    width: 100px;
+}
+</style>

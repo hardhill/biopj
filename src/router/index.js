@@ -17,10 +17,16 @@ Vue.use(VueRouter)
     component: () => import('../views/Tests.vue')
   },
   {
-    path: '/profile',
-    name: 'profile',
+    path: '/login',
+    name: 'login',
     meta: { layout: 'main' },
-    component: () => import('../views/Profile.vue')
+    component: () => import('../views/ProfileLogin.vue')
+  },
+  {
+    path: '/registry',
+    name: 'registry',
+    meta: { layout: 'main' },
+    component: () => import('../views/ProfileRegistry.vue')
   }
 ]
 

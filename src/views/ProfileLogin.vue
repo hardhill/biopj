@@ -1,5 +1,6 @@
 <template>
     <div class="login-block">
+        Вход
         <div class="input-block">
             <div>Логин</div>
             <div class="input">
@@ -12,32 +13,12 @@
                 <input type="text">
             </div>
         </div>
-        <div class="enter">Войти</div>
+        <button>Войти</button>
+        <br>
+        <router-link to="/registry">Еще не зарегистрированы?</router-link>
     </div>
 </template>
 
-<style lang="scss" scoped>
-.login-block{
-    width: 500px;
-    border: 1px solid black;
-    margin: auto;
-}
-.input-block{
-    margin: 1em;
-    div{
-        font-size: 1.2rem;
-        display: flex;
-        
-    }
-    input{
-        margin-top: 1em;
+<style lang="scss">
 
-    }
-}
-.enter{
-    border: 1px solid black;
-    margin: auto;
-    width: 100px;
-    
-}
 </style>

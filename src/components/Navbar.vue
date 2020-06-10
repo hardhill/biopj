@@ -9,7 +9,7 @@
             </router-link>
         </div>
         <div>
-            <router-link tag="span" :to="'/profile'">
+            <router-link tag="span" :to="'/login'">
                 Вход
             </router-link>
         </div>
