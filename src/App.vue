@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <component :is="layout">
-      <router-view/>
-    </component> 
+      <router-view />
+    </component>
   </div>
 </template>
 
@@ -14,19 +14,19 @@
 
 
 <script>
-import MainLayout from '@/layouts/MainLayout'
+import MainLayout from "@/layouts/MainLayout";
 export default {
   computed: {
     layout() {
       // console.log(this.$route.meta)
       // return (this.$route.meta.layout || 'empty') + '-layout'
-      return 'main-layout'
+      return "main-layout";
     }
   },
   components: {
     MainLayout
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -38,8 +38,9 @@ export default {
   color: #2c3e50;
 }
 
-*{
+* {
   margin: 0;
 }
+
 
 </style>
