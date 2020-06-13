@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -27,6 +28,12 @@ Vue.use(VueRouter)
     name: 'registry',
     meta: { layout: 'main' },
     component: () => import('../views/ProfileRegistry.vue')
+  },
+  {
+    path: '/focustest',
+    name: 'focustest',
+    meta: { layout: 'main' },
+    component: () => import('../views/FocusTest.vue')
   }
 ]
 

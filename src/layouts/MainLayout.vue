@@ -29,7 +29,6 @@ export default {
     div{
         font-size: 1.2rem;
         display: flex;
-        
     }
 }
 .enter{
