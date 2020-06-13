@@ -1,4 +1,16 @@
 <template>
+  <!-- <div class="test-block" v-for="test in tests" :key="test.h">
+    <div>
+      <div class="test-block-h">{{test.h}}</div>
+      <div class="test-block-des">
+        <div class="qq">{{test.questions}} вопросов</div>
+      </div>
+    </div>
+    <div class="test-block-footer">
+      <div>Награда: {{test.price}}</div>
+      <router-link tag="button" to="/focustest" class="my-custom-button">начать</router-link>
+    </div>
+  </div>-->
   <div class="test-block">
     <div>
       <div class="test-block-h">{{h}}</div>
