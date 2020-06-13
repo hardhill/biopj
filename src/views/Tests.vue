@@ -1,17 +1,21 @@
 <template>
-  <div class="main-test-container">
-    <test-block
-      v-for="test in tests"
-      :key="test.h"
-      :h="test.h"
-      :questions="test.questions"
-      :price="test.price"
-    ></test-block>
+  <div>
+    <div>Кол-во тестов: {{count}}</div>
+    <div class="main-test-container">
+      <test-block
+        v-for="test in tests"
+        :key="test.h"
+        :h="test.h"
+        :questions="test.questions"
+        :price="test.price"
+      ></test-block>
+    </div>
   </div>
 </template>
 <script>
 import TestBlock from "@/components/TestBlock";
 export default {
+  
   data: () => ({
     tests: [
       {
@@ -25,6 +29,14 @@ export default {
   }),
   components: {
     TestBlock
+  },
+  computed: {
+    count(){
+      return this.$store.state.count
+    }
+  },
+  methods: {
+
   }
 };
 </script>
