@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div>Кол-во тестов: {{count}}</div>
+    <div>Кол-во тестов: {{countMass()}}{{cd_count}}</div>
     <div class="main-test-container">
       <test-block
-        v-for="test in tests"
+        v-for="test in cd_test"
         :key="test.h"
         :h="test.h"
         :questions="test.questions"
@@ -17,26 +17,23 @@ import TestBlock from "@/components/TestBlock";
 export default {
   
   data: () => ({
-    tests: [
-      {
-        h: "Биология как наука. Лучше ее не изучать",
-        questions: 10,
-        price: 250
-      },
-      { h: "Тест 2", questions: 6 },
-      { h: "Тест 3", questions: 8 }
-    ]
+    
   }),
   components: {
     TestBlock
   },
   computed: {
-    count(){
+    cd_count(){
       return this.$store.state.count
+    },
+    cd_test(){
+      return this.$store.state.tests
     }
   },
   methods: {
-
+    countMass(){
+     this.$store.commit('countMass')
+    }
   }
 };
 </script>

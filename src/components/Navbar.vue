@@ -15,7 +15,9 @@ nav {
   background-color: aqua;
   display: flex;
   justify-content: space-between;
-  padding: 1em 3em;
+  align-items: center;
+  padding: 0 2em;
+  min-height: 50px;
 
   span:not(:first-child) {
     padding-left: 1.5em;
