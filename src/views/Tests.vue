@@ -15,7 +15,7 @@
 <script>
 import TestBlock from "@/components/TestBlock";
 export default {
-  
+  name: "tests",
   data: () => ({
     
   }),

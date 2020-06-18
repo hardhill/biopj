@@ -33,7 +33,7 @@ export default {};
     padding: 1em;
     align-items: center;
     .checkbox{
-        
+      
     }
     .text{
         margin-left: 1em;

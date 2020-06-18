@@ -2,17 +2,25 @@
     <div>
         <navbar></navbar>
         <div>
-            <router-view/>
+            <component :is="component">
+                <router-view/>
+            </component>
         </div>
     </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
+import Tests from '@/views/Tests'
 export default {
     name: 'main-layout',
+    computed: {
+        component(){
+            return "tests"
+        }
+    },
     components: {
-        Navbar
+        Navbar, Tests
     }
 }
 </script>
