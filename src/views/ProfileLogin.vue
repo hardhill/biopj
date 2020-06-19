@@ -62,7 +62,7 @@ export default {
     
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       this.pokaz = !this.pokaz
       if (this.$v.$invalid) {
         this.$v.$touch();
@@ -72,8 +72,11 @@ export default {
         email: this.email,
         password: this.password
       };
+
+      await this.$store.dispatch('login', formData)
+
       this.$router.push("/tests");
-      console.log(formData);
+      // console.log(formData);
     }
   }
 };
