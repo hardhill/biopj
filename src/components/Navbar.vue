@@ -2,21 +2,27 @@
   <nav>
     <div>
       <router-link tag="span" :to="'/theory'" :class="{active: name == 'theory'}">Теория</router-link>
-      <router-link tag="span" :to="'/tests'" :class="{active: (name === 'focustest' || name === 'tests')}">Тесты</router-link>
+      <router-link
+        tag="span"
+        :to="'/tests'"
+        :class="{active: (name == 'focustest' || name == 'tests')}"
+      >Тесты</router-link>
     </div>
     <div class="right-block">
       <!-- <div>250</div> -->
-      <router-link tag="span" :to="'/login'" :class="{active: name == 'login'}">Вход</router-link>
+      <router-link
+        tag="span"
+        :to="'/login'"
+        :class="{active: (name == 'login' || name == 'registry')}"
+      >Вход</router-link>
     </div>
   </nav>
 </template>
 <script>
 export default {
   props: ["name"],
-  computed: { 
-    classActiveCheck: function(){
-      
-    }
+  computed: {
+    classActiveCheck: function() {}
   }
 };
 </script>>
@@ -32,7 +38,7 @@ nav {
   color: #ffffff;
   // .right-block {
   //   display: flex;
-  // }  !!! Поднимаеться вверх при добавлении класса active 
+  // }  !!! Поднимаеться вверх при добавлении класса active
   span:not(:first-child) {
     margin-left: 1.5em;
   }
