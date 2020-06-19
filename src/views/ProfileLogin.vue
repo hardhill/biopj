@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <message  title="Hello from Alex" v-show="pokaz"></message>
+    <message title="Hello from Alex" v-show="pokaz"></message>
     <form @submit.prevent="onSubmit">
       <div class="login-block">
         Вход
@@ -42,7 +42,7 @@
 
 <script>
 import { email, required, minLength } from "vuelidate/lib/validators";
-import Message from '@/components/Message'
+import Message from "@/components/Message";
 
 export default {
   components: {
@@ -52,18 +52,16 @@ export default {
   data: () => ({
     email: "",
     password: "",
-    pokaz:false
+    pokaz: false
   }),
   validations: {
     email: { email, required },
     password: { required, minLength: minLength(6) }
   },
-  computed:{
-    
-  },
+  computed: {},
   methods: {
     async onSubmit() {
-      this.pokaz = !this.pokaz
+      this.pokaz = !this.pokaz;
       if (this.$v.$invalid) {
         this.$v.$touch();
         return;
@@ -73,9 +71,10 @@ export default {
         password: this.password
       };
 
-      await this.$store.dispatch('login', formData)
-
-      this.$router.push("/tests");
+      try {
+        await this.$store.dispatch("login", formData);
+        this.$router.push("/tests");
+      } catch (e) {}
       // console.log(formData);
     }
   }
