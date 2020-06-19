@@ -8,7 +8,7 @@
     </div>
     <div class="test-block-footer">
       <div>Награда: {{price}}</div>
-      <router-link tag="button" to="/focustest" class="my-custom-button">начать</router-link>
+      <router-link tag="button" :to="'/focustest'" class="my-custom-button">начать</router-link>
     </div>
   </div>
 </template>

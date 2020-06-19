@@ -18,7 +18,7 @@ import MainLayout from "@/layouts/MainLayout";
 export default {
   computed: {
     layout() {
-      // console.log(this.$route.meta)
+      // console.log(this.$route.name)
       // return (this.$route.meta.layout || 'empty') + '-layout'
       return "main-layout";
     }

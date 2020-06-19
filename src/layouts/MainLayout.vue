@@ -1,54 +1,52 @@
 <template>
+  <div>
+    <navbar :name="navbarActive"></navbar>
     <div>
-        <navbar></navbar>
-        <div>
-            <component :is="component">
-                <router-view/>
-            </component>
-        </div>
+      <router-view />
     </div>
+  </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-import Tests from '@/views/Tests'
+import Navbar from "@/components/Navbar";
 export default {
-    name: 'main-layout',
-    computed: {
-        component(){
-            return "tests"
-        }
-    },
-    components: {
-        Navbar, Tests
+  name: "main-layout",
+  computed: {
+    navbarActive() {
+      console.log(this.$route.name);
+      return this.$route.name;
     }
-}
+  },
+  components: {
+    Navbar
+  }
+};
 </script>
 
 <style lang="scss">
-.login-block{
-    width: 500px;
-    border: 1px solid black;
-    margin: auto;
-    margin-top: 1em;
+.login-block {
+  width: 500px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 1em;
 }
-.input-block{
-    margin: 1em;
-    div{
-        font-size: 1.2rem;
-        display: flex;
-    }
-}
-.enter{
-    border: 1px solid black;
-    margin: auto;
-    width: 100px;
-}
-.invalid{
-    background-color: rgb(216, 64, 64);
-}
-.input-form{
+.input-block {
+  margin: 1em;
+  div {
+    font-size: 1.2rem;
     display: flex;
-    align-items: center;
+  }
+}
+.enter {
+  border: 1px solid black;
+  margin: auto;
+  width: 100px;
+}
+.invalid {
+  background-color: rgb(216, 64, 64);
+}
+.input-form {
+  display: flex;
+  align-items: center;
 }
 </style>

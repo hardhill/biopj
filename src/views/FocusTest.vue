@@ -19,9 +19,7 @@
 import QuestionBlock from "@/components/QuestionBlock";
 export default {
   computed: {
-    cd_test() {
-      return this.$store.state.tests;
-    }
+    
   },
   components: {
     QuestionBlock
