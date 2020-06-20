@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  props: ["h", "price","questions"]
+  props: ["h", "price", "questions"]
 };
 </script>
 
@@ -53,6 +53,12 @@ export default {
     padding-bottom: 0;
   }
 }
+.test-block:hover {
+  transition: 0.4s;
+  box-shadow: 10px 10px 18px -6px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 10px 10px 18px -6px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 10px 10px 18px -6px rgba(0, 0, 0, 0.41);
+}
 @mixin button-reset {
   padding: 0;
   border: none;
@@ -64,8 +70,8 @@ export default {
 
 .my-custom-button {
   @include button-reset;
-  border-radius: 5px;
-  padding: 3px;
+  border-radius: 10px;
+  padding: 0.4em;
   background-color: rgba(126, 16, 216, 0.685);
 }
 </style>
