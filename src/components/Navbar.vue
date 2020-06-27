@@ -9,7 +9,10 @@
       >Тесты</router-link>
     </div>
     <div class="right-block">
-      <!-- <div>250</div> -->
+      <span
+        tag="span"
+        @click="logout"
+      >Выход</span>
       <router-link
         tag="span"
         :to="'/login'"
@@ -23,6 +26,12 @@ export default {
   props: ["name"],
   computed: {
     classActiveCheck: function() {}
+  },
+  methods: {
+    async logout(){
+      await this.$store.dispatch('logout')
+      this.$router.push('/login')
+    } 
   }
 };
 </script>>

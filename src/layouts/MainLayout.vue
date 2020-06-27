@@ -15,6 +15,14 @@ export default {
     navbarActive() {
       console.log(this.$route.name);
       return this.$route.name;
+    },
+    error() {
+      return this.$store.getters.error;
+    }
+  },
+  watch: {
+    error(fbError) {
+      console.log(fbError);
     }
   },
   components: {

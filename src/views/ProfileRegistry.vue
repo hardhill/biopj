@@ -64,7 +64,7 @@ export default {
     name: {required}
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       
 
       if (this.$v.$invalid) {
@@ -76,8 +76,11 @@ export default {
         password: this.password,
         name: this.name
       };
+
+      await this.$store.dispatch('register', formData)
+
       this.$router.push("/tests");
-      console.log(formData);
+      
     }
   }
 };

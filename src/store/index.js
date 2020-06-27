@@ -16,11 +16,23 @@ export default new Vuex.Store({
       { h: "Тест 2", questions: 6 },
       { h: "Тест 3", questions: 8 }
     ],
+
+    // Ошибки 
+    error: null
   },
   mutations: {
     countMass(state){
       state.count = state.tests.length
-    }
+    },
+    setError(state, error){
+      state.error = error
+    },
+    clearError(state, ){
+      state.error = null
+    },
+  },
+  getters: {
+    error: s => s.error
   },
   actions: {
   },

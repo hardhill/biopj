@@ -36,9 +36,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .section {
-  border: 2px solid rgb(99, 0, 192);
+  border: 2px solid rgb(99, 0, 192); // поправить цвет
   max-width: 500px;
-  margin: 2em auto; //  Поправить цвет
+  margin: 2em auto; 
   font-weight: bold;
   font-size: 1.3rem;
   border-radius: 20px; // Поменять радиус как у тест блоков ?
