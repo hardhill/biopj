@@ -32,29 +32,15 @@ export default {
 </script>
 
 <style lang="scss">
-.login-block {
-  width: 500px;
-  border: 1px solid black;
-  margin: auto;
-  margin-top: 1em;
+* {
+  box-sizing: border-box;
 }
-.input-block {
-  margin: 1em;
-  div {
-    font-size: 1.2rem;
-    display: flex;
-  }
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
 }
-.enter {
-  border: 1px solid black;
-  margin: auto;
-  width: 100px;
-}
-.invalid {
-  background-color: rgb(216, 64, 64);
-}
-.input-form {
-  display: flex;
-  align-items: center;
-}
+
 </style>

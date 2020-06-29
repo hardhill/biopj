@@ -10,6 +10,7 @@
     </div>
     <div class="right-block">
       <span
+        style="display: none;"
         tag="span"
         @click="logout"
       >Выход</span>
@@ -45,9 +46,6 @@ nav {
   padding: 0 2em;
   min-height: 50px;
   color: #ffffff;
-  // .right-block {
-  //   display: flex;
-  // }  !!! Поднимаеться вверх при добавлении класса active
   span:not(:first-child) {
     margin-left: 1.5em;
   }
