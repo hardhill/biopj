@@ -41,7 +41,7 @@
           <small v-if="$v.name.$dirty && !$v.name.required">Введите имя !</small>
         </div>
       </div>
-      <div class="footer"
+      <div class="footer">
         <router-link to="/login">Уже зарегистрированы?</router-link>
         <button type="submit">Регистрация</button>
       </div>

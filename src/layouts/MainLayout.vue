@@ -13,13 +13,13 @@ export default {
   name: "main-layout",
   computed: {
     navbarActive() {
-      console.log(this.$route.name);
       return this.$route.name;
     },
     error() {
       return this.$store.getters.error;
     }
   },
+  
   watch: {
     error(fbError) {
       console.log(fbError);
@@ -42,5 +42,4 @@ select {
   font: inherit;
   outline: none;
 }
-
 </style>
