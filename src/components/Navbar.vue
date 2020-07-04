@@ -21,15 +21,15 @@
 <script>
 export default {
   props: ["name"],
-  computed: {
-    
-  },
+
+  computed: {},
   methods: {
     async logout() {
       await this.$store.dispatch("logout");
       this.$router.push("/login");
     }
-  }
+  },
+  mounted() {}
 };
 </script>>
 

@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/theory',
     name: 'theory',
@@ -20,13 +20,13 @@ Vue.use(VueRouter)
   {
     path: '/login',
     name: 'login',
-    meta: { layout: 'main' },
+    meta: { layout: 'empty' },
     component: () => import('../views/ProfileLogin.vue')
   },
   {
     path: '/registry',
     name: 'registry',
-    meta: { layout: 'main' },
+    meta: { layout: 'empty' },
     component: () => import('../views/ProfileRegistry.vue')
   },
   {

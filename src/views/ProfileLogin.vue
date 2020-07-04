@@ -65,25 +65,12 @@ export default {
       const formData = {
         email: this.email,
         password: this.password
-      };
-
-      // async function fetchINFO(){
-      //   const vm = this;
-      //   console.log(vm)
-      //   await vm.$store.dispatch("fetchInfo");
-      //   if (!Object.keys(vm.$store.getters.info).length) {
-      //     await vm.$store.dispatch("fetchInfo");
-      //   }
-      // }
-       
-      // fetchINFO()
-
-      
+      };      
 
       try {
         await this.$store.dispatch("login", formData);
-        this.$router.push("/tests");
         await this.$store.dispatch("fetchInfo")
+        this.$router.push("/tests");
       } catch (e) {}
       
     }
