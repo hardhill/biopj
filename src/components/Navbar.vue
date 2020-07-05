@@ -32,7 +32,7 @@ export default {
     },
     on: function() {
       console.log(localStorage.name);
-      if () {
+      if (localStorage.name == undefined) {
         return (this.onSite = !this.onSite);
       } else {
         return this.onSite;
