@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="bg">
       <router-view />
     </div>
   </div>
@@ -13,4 +13,5 @@ export default {
 </script>
 
 <style>
+
 </style>

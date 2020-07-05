@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/theory',
+    path: '/',
     name: 'theory',
     meta: { layout: 'main' },
     component: () => import('../views/Theory.vue')

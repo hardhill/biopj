@@ -17,12 +17,19 @@ export default {
       const uid = await dispatch('getUid')
       try {
         const info = (await firebase.database().ref(`/users/${uid}/info`).once('value')).val()
-        console.log(info)
         commit('setInfo', info)
+        dispatch("setInfoToLocal")
       } catch (e) {
 
       }
     },
+    setInfoToLocal({state}){
+      const localName = state.info.name
+      localStorage.setItem("name", localName)
+    },
+    removeInfoToLocal({}){
+      localStorage.removeItem("name")
+    }
   },
   getters: {
     info: s => s.info
