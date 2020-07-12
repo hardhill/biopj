@@ -25,6 +25,9 @@ export default {
   components: {
     MainLayout,
     EmptyLayout
+  },
+  mounted: () => {
+    this.$session.id()
   }
 };
 </script>
