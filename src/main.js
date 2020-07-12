@@ -10,6 +10,10 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 
+
+import VueSession from 'vue-session'
+Vue.use(VueSession)
+
 Vue.config.productionTip = false
 
 Vue.use(Vuelidate)
