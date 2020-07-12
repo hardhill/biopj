@@ -4,6 +4,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import VueSession from './session'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -12,8 +13,6 @@ import 'firebase/database'
 Vue.config.productionTip = false
 
 Vue.use(Vuelidate)
-
-
 
 firebase.initializeApp({
   apiKey: "AIzaSyC4en-Glbi1ZHHMMV_YtoMQhlW4d4NNvlk",
@@ -28,11 +27,12 @@ firebase.initializeApp({
 
 let app
 
-firebase.auth().onAuthStateChanged(()=>{
-  if(!app){
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
     app = new Vue({
       router,
       store,
+      VueSession,
       render: h => h(App)
     }).$mount('#app')
   }

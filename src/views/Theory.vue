@@ -31,6 +31,17 @@ export default {
       }
       
     }
+    
+  },
+  created(){
+    console.log('Created')
+    this.$session.start()
+    console.log(this.$session.id())
+  },
+  mounted(){
+    console.log('Mounted')
+    this.$session.start()
+    console.log(this.$session.id())
   }
 };
 </script>
